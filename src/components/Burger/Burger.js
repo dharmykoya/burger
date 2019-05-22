@@ -14,7 +14,6 @@ const burger = (props) => {
     return prevVal.concat(curVal)
   }, []);
   if (transIngredients.length === 0) {
-    console.log('here')
     transIngredients = <p>Please start adding ingredients</p>;
   }
   return (
