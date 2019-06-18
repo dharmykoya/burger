@@ -10,3 +10,10 @@ export {
   purchaseInit,
   fetchOrders,
 } from './orderAction';
+
+
+export {
+  auth,
+  logout,
+  authCheckState
+} from './authAction'
