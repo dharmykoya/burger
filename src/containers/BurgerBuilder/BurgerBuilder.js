@@ -13,16 +13,12 @@ import * as actions from '../../store/actions/IndexActions';
 
 class BurgerBuilder extends Component {
   state = {
-    // ingredients: null,
     totalPrice: 4,
     purchasable: false,
     purchasing: false,
-    // loading: false,
-    // error: false,
   }
 
   componentDidMount () {
-    console.log(this.props)
     this.props.onInitIngredients()
   }
 
@@ -87,9 +83,9 @@ class BurgerBuilder extends Component {
       />;
     }
 
-    // if (this.state.loading) {
-    //   orderSummary = <Spinner />;
-    // }
+    if (this.state.loading) {
+      orderSummary = <Spinner />;
+    }
     return (
       <Aux>
         <Modal show={this.state.purchasing} modalClosed={this.purchaseCancelHandler}>
